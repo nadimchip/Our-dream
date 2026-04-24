@@ -198,7 +198,7 @@
       let count = 0;
       const update = () => {
         if (count < target) {
-          count += target / 60; // গতি ঠিক করার জন্য
+          count += target / 60;
           counter.innerText = Math.ceil(count);
           setTimeout(update, 25);
         } else { counter.innerText = target; }
