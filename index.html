@@ -136,37 +136,39 @@
       <div
         class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
       >
-        <div>
-          <h2 class="text-4xl font-bold text-gray-900">34</h2>
-          <p class="text-gray-500 font-medium">Man (%)</p>
-          <div class="w-full bg-gray-200 h-2 mt-2 rounded-full">
-            <div
-              class="bg-yellow-400 h-2 rounded-full"
-              style="width: 34%"
-            ></div>
-          </div>
-        </div>
-        <div>
-          <h2 class="text-4xl font-bold text-gray-900">41</h2>
-          <p class="text-gray-500 font-medium">Women (%)</p>
-          <div class="w-full bg-gray-200 h-2 mt-2 rounded-full">
-            <div class="bg-pink-400 h-2 rounded-full" style="width: 41%"></div>
-          </div>
-        </div>
-        <div>
-          <h2 class="text-4xl font-bold text-gray-900">100</h2>
-          <p class="text-gray-500 font-medium">success (%)</p>
-          <div class="w-full bg-gray-200 h-2 mt-2 rounded-full">
-            <div class="bg-teal-400 h-2 rounded-full" style="width: 100%"></div>
-          </div>
-        </div>
-        <div>
-          <h2 class="text-4xl font-bold text-gray-900">76</h2>
-          <p class="text-gray-500 font-medium">Job complete (%)</p>
-          <div class="w-full bg-gray-200 h-2 mt-2 rounded-full">
-            <div class="bg-blue-400 h-2 rounded-full" style="width: 76%"></div>
-          </div>
-        </div>
+        <div id="stats-section" class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center py-16 bg-white px-6">
+  <div class="flex flex-col items-center">
+    <div class="text-4xl font-bold mb-2"><span class="counter" data-target="34">0</span>%</div>
+    <p class="text-gray-500 uppercase text-[10px] font-semibold tracking-wide">Man (%)</p>
+    <div class="w-full max-w-[100px] bg-gray-200 h-1.5 mt-4 rounded-full overflow-hidden">
+      <div class="bg-yellow-400 h-full progress-bar w-0 transition-all duration-[2000ms]" data-width="34%"></div>
+    </div>
+  </div>
+
+  <div class="flex flex-col items-center">
+    <div class="text-4xl font-bold mb-2"><span class="counter" data-target="41">0</span>%</div>
+    <p class="text-gray-500 uppercase text-[10px] font-semibold tracking-wide">Women (%)</p>
+    <div class="w-full max-w-[100px] bg-gray-200 h-1.5 mt-4 rounded-full overflow-hidden">
+      <div class="bg-pink-500 h-full progress-bar w-0 transition-all duration-[2000ms]" data-width="41%"></div>
+    </div>
+  </div>
+
+  <div class="flex flex-col items-center">
+    <div class="text-4xl font-bold mb-2"><span class="counter" data-target="100">0</span>%</div>
+    <p class="text-gray-500 uppercase text-[10px] font-semibold tracking-wide">Success (%)</p>
+    <div class="w-full max-w-[100px] bg-gray-200 h-1.5 mt-4 rounded-full overflow-hidden">
+      <div class="bg-teal-400 h-full progress-bar w-0 transition-all duration-[2000ms]" data-width="100%"></div>
+    </div>
+  </div>
+
+  <div class="flex flex-col items-center">
+    <div class="text-4xl font-bold mb-2"><span class="counter" data-target="76">0</span>%</div>
+    <p class="text-gray-500 uppercase text-[10px] font-semibold tracking-wide">Job Complete (%)</p>
+    <div class="w-full max-w-[100px] bg-gray-200 h-1.5 mt-4 rounded-full overflow-hidden">
+      <div class="bg-blue-500 h-full progress-bar w-0 transition-all duration-[2000ms]" data-width="76%"></div>
+    </div>
+  </div>
+</div>
       </div>
       <div class="text-center mt-12 text-gray-400 text-sm">
            2000-2026.... Our Dream
@@ -189,5 +191,34 @@
         });
       });
     </script>
+    <script>
+  const runStats = () => {
+    document.querySelectorAll('.counter').forEach(counter => {
+      const target = +counter.getAttribute('data-target');
+      let count = 0;
+      const update = () => {
+        if (count < target) {
+          count += target / 60; // গতি ঠিক করার জন্য
+          counter.innerText = Math.ceil(count);
+          setTimeout(update, 25);
+        } else { counter.innerText = target; }
+      };
+      update();
+    });
+    document.querySelectorAll('.progress-bar').forEach(bar => {
+      bar.style.width = bar.getAttribute('data-width');
+    });
+  };
+
+  const observer = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) { 
+      runStats(); 
+      observer.disconnect(); 
+    }
+  }, { threshold: 0.3 });
+
+  const statsEl = document.getElementById('stats-section');
+  if(statsEl) observer.observe(statsEl);
+</script>
   </body>
 </html>
