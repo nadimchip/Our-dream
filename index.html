@@ -188,18 +188,21 @@
         });
       });
     </script>
-    <script>
+   <script>
+
   const runStats = () => {
     document.querySelectorAll('.counter').forEach(counter => {
       const target = +counter.getAttribute('data-target');
       let count = 0;
       const update = () => {
-        const increment = target / 50; 
+        const increment = target / 60; 
         if (count < target) {
           count += increment;
           counter.innerText = Math.ceil(count);
-          setTimeout(update, 30);
-        } else { counter.innerText = target; }
+          setTimeout(update, 25);
+        } else {
+          counter.innerText = target;
+        }
       };
       update();
     });
@@ -208,18 +211,19 @@
       bar.style.width = bar.getAttribute('data-width');
     });
   };
-
+     
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         runStats();
-        observer.unobserve(entry.target);
+        observer.unobserve(entry.target); 
       }
     });
-  }, { threshold: 0.5 });
-
+  }, { threshold: 0.4 }); 
   const statsEl = document.getElementById('stats-section');
-  if (statsEl) observer.observe(statsEl);
+  if (statsEl) {
+    observer.observe(statsEl);
+  }
 </script>
   </body>
 </html>
