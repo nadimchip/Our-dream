@@ -188,8 +188,7 @@
         });
       });
     </script>
-   <script>
-
+  <script>
   const runStats = () => {
     document.querySelectorAll('.counter').forEach(counter => {
       const target = +counter.getAttribute('data-target');
@@ -211,15 +210,26 @@
       bar.style.width = bar.getAttribute('data-width');
     });
   };
-     
+
+  const resetStats = () => {
+    document.querySelectorAll('.counter').forEach(counter => {
+      counter.innerText = '0';
+    });
+    document.querySelectorAll('.progress-bar').forEach(bar => {
+      bar.style.width = '0';
+    });
+  };
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         runStats();
-        observer.unobserve(entry.target); 
+      } else {
+        resetStats();
       }
     });
-  }, { threshold: 0.4 }); 
+  }, { threshold: 0.2 });
+
   const statsEl = document.getElementById('stats-section');
   if (statsEl) {
     observer.observe(statsEl);
