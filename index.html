@@ -28,8 +28,15 @@
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  z-index: 1; pointer-events: none;
+  z-index: 0; /* জোনাকি এখন সবকিছুর নিচে থাকবে */
+  pointer-events: none;
   overflow: hidden;
+}
+
+/* নিশ্চিত করুন আপনার কন্টেন্ট উপরে আছে */
+.hero-content {
+  position: relative;
+  z-index: 10; /* লেখা এবং বাটন জোনাকির উপরে থাকবে */
 }
 
 .firefly {
