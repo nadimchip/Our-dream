@@ -293,5 +293,19 @@
     observer.observe(statsEl);
   }
 </script>
+    <script>
+  function createFireflies() {
+    const container = document.querySelector('.fireflies');
+    for (let i = 0; i < 30; i++) {
+      const f = document.createElement('div');
+      f.classList.add('firefly');
+      f.style.left = Math.random() * 100 + '%';
+      f.style.top = Math.random() * 100 + '%';
+      f.style.animationDuration = (Math.random() * 10 + 5) + 's, ' + (Math.random() * 3 + 1) + 's';
+      container.appendChild(f);
+    }
+  }
+  createFireflies();
+</script>
   </body>
 </html>
