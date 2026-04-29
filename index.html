@@ -61,26 +61,43 @@
   </head>
   <body class="bg-gray-50">
     <header class="fixed w-full flex items-center justify-between px-4 md:px-10 py-2 text-white z-50 backdrop-blur-2xl bg-black/20 border-b border-white/10">
-      <div class="text-lg md:text-4xl font-black tracking-tighter uppercase italic" 
-     style="color: #fff;
-            background: linear-gradient(to bottom, #fff 30%, #00dfd8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 
-                0px 1px 0px #ccc,
-                0px 2px 0px #999,
-                0px 3px 0px #888,
-                0px 4px 0px #777,
-                0px 5px 0px #666,
-                0px 6px 1px rgba(0,0,0,.1),
-                0px 0px 10px rgba(0,112,243,0.5),
-                0px 7px 10px rgba(0,0,0,0.4);
-            transform: perspective(500px) rotateX(10deg);
-            display: inline-block;
-            filter: drop-shadow(0 0 15px rgba(0, 223, 216, 0.4));">
-    OUR DREAM
-</div>
       
+      <!-- নতুন লোগো এবং আপনার সেই ৩ডি টেক্সট একত্রে -->
+      <div class="flex items-center space-x-3">
+          <!-- OD 3D SVG LOGO -->
+          <svg width="55" height="55" viewBox="0 0 100 100" style="filter: drop-shadow(0 0 12px rgba(0, 223, 216, 0.7));">
+              <defs>
+                  <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style="stop-color:#ff0080;stop-opacity:1" />
+                      <stop offset="50%" style="stop-color:#7928ca;stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#00dfd8;stop-opacity:1" />
+                  </linearGradient>
+              </defs>
+              <circle cx="35" cy="50" r="30" stroke="url(#logoGradient)" stroke-width="8" fill="none" stroke-linecap="round" />
+              <path d="M55 20 V80 Q85 80 85 50 Q85 20 55 20" fill="none" stroke="url(#logoGradient)" stroke-width="8" stroke-linecap="round" />
+          </svg>
+
+          <!-- আপনার বর্তমান ৩ডি টেক্সট যা আপনি মুছতে চান না -->
+          <div class="text-lg md:text-4xl font-black tracking-tighter uppercase italic" 
+               style="color: #fff;
+                      background: linear-gradient(to bottom, #fff 30%, #00dfd8 100%);
+                      -webkit-background-clip: text;
+                      -webkit-text-fill-color: transparent;
+                      text-shadow: 
+                          0px 1px 0px #ccc,
+                          0px 2px 0px #999,
+                          0px 3px 0px #888,
+                          0px 4px 0px #777,
+                          0px 5px 0px #666,
+                          0px 6px 1px rgba(0,0,0,.1),
+                          0px 0px 10px rgba(0,112,243,0.5),
+                          0px 7px 10px rgba(0,0,0,0.4);
+                      transform: perspective(500px) rotateX(10deg);
+                      display: inline-block;
+                      filter: drop-shadow(0 0 15px rgba(0, 223, 216, 0.4));">
+              OUR DREAM
+          </div>
+      </div>
       <div class="flex items-center space-x-3 md:space-x-8">
         <nav class="flex space-x-3 font-medium text-[10px] md:text-base">
           <a href="#home" class="hover:text-gray-300">Home</a>
