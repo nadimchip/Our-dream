@@ -3,71 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Dream -</title>
+    <title>Our Dream - Portfolio</title>
 
-    <!-- Clean Favicon Link -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ff0080'/%3E%3Cstop offset='50%25' style='stop-color:%237928ca'/%3E%3Cstop offset='100%25' style='stop-color:%2300dfd8'/%3E%3C/linearGradient%3E%3Cfilter id='glow'%3E%3CfeGaussianBlur stdDeviation='2' result='blur'/%3E%3CfeComposite in='SourceGraphic' in2='blur' operator='over'/%3E%3C/filter%3E%3C/defs%3E%3Cg filter='url(%23glow)'%3E%3Ccircle cx='35' cy='50' r='30' stroke='url(%23g)' stroke-width='12' fill='none'/%3E%3Cpath d='M55 20 V80 Q85 80 85 50 Q85 20 55 20' fill='none' stroke='url(%23g)' stroke-width='12' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E">    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Clean Favicon (Sharp & Thin) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ff0080'/%3E%3Cstop offset='50%25' style='stop-color:%237928ca'/%3E%3Cstop offset='100%25' style='stop-color:%2300dfd8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='35' cy='50' r='32' stroke='url(%23g)' stroke-width='6' fill='none'/%3E%3Cpath d='M55 18 V82 Q85 82 85 50 Q85 18 55 18' fill='none' stroke='url(%23g)' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+
     <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        font-family: "Inter", sans-serif;
-      }
+      html { scroll-behavior: smooth; }
+      body { font-family: "Inter", sans-serif; }
       .hero-section {
         background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-          url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
+          url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1350&q=80");
+        background-size: cover; background-position: center; background-attachment: fixed;
       }
-      /* জোনাকি পোকার ডিজাইন */
-.fireflies {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  z-index: 0; /* জোনাকি এখন সবকিছুর নিচে থাকবে */
-  pointer-events: none;
-  overflow: hidden;
-}
-
-/* নিশ্চিত করুন আপনার কন্টেন্ট উপরে আছে */
-.hero-content {
-  position: relative;
-  z-index: 10; /* লেখা এবং বাটন জোনাকির উপরে থাকবে */
-}
-
-.firefly {
-  position: absolute;
-  width: 5px; height: 5px;
-  background-color: yellow;
-  border-radius: 50%;
-  box-shadow: 0 0 10px 2px rgba(255, 255, 0, 0.8);
-  animation: move linear infinite, blink ease-in-out infinite;
-}
-
-@keyframes move {
-  0%, 100% { transform: translate(0, 0); }
-  70% { transform: translate(100px, 100px); }
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 0.2; }
-  70% { opacity: 2; }
-}
+      .fireflies { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; overflow: hidden; }
+      .firefly { position: absolute; width: 5px; height: 5px; background-color: yellow; border-radius: 50%; box-shadow: 0 0 10px 2px rgba(255, 255, 0, 0.8); animation: move linear infinite, blink ease-in-out infinite; }
+      @keyframes move { 0%, 100% { transform: translate(0, 0); } 70% { transform: translate(100px, 100px); } }
+      @keyframes blink { 0%, 100% { opacity: 0.2; } 70% { opacity: 2; } }
     </style>
   </head>
+
   <body class="bg-gray-50">
-    <header class="fixed w-full flex items-center justify-between px-2 md:px-8 py-0.5 text-white z-50 backdrop-blur-2xl bg-black/20 border-b border-white/10">
-      
-      <!-- নতুন লোগো এবং আপনার সেই ৩ডি টেক্সট একত্রে -->
+    <!-- Slim Header (py-1 reduced padding) -->
+    <header class="fixed w-full flex items-center justify-between px-4 md:px-10 py-1 text-white z-50 backdrop-blur-2xl bg-black/20 border-b border-white/10">
       <div class="flex items-center space-x-3">
-          <!-- OD 3D SVG LOGO -->
-          <svg width="55" height="55" viewBox="0 0 100 100" style="filter: drop-shadow(0 0 12px rgba(0, 223, 216, 0.7));">
+          <!-- Small & Thin OD Logo -->
+          <svg width="40" height="40" viewBox="0 0 100 100" style="filter: drop-shadow(0 0 12px rgba(0, 223, 216, 0.7));">
               <defs>
                   <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                       <stop offset="0%" style="stop-color:#ff0080;stop-opacity:1" />
@@ -75,342 +39,166 @@
                       <stop offset="100%" style="stop-color:#00dfd8;stop-opacity:1" />
                   </linearGradient>
               </defs>
-              <circle cx="35" cy="50" r="30" stroke="url(#logoGradient)" stroke-width="8" fill="none" stroke-linecap="round" />
-              <path d="M55 20 V80 Q85 80 85 50 Q85 20 55 20" fill="none" stroke="url(#logoGradient)" stroke-width="8" stroke-linecap="round" />
+              <circle cx="35" cy="50" r="30" stroke="url(#logoGradient)" stroke-width="6" fill="none" stroke-linecap="round" />
+              <path d="M55 20 V80 Q85 80 85 50 Q85 20 55 20" fill="none" stroke="url(#logoGradient)" stroke-width="6" stroke-linecap="round" />
           </svg>
 
-          <!-- আপনার বর্তমান ৩ডি টেক্সট যা আপনি মুছতে চান না -->
-          <div class="text-lg md:text-4xl font-black tracking-tighter uppercase italic" 
-               style="color: #fff;
-                      background: linear-gradient(to bottom, #fff 30%, #00dfd8 100%);
-                      -webkit-background-clip: text;
-                      -webkit-text-fill-color: transparent;
-                      text-shadow: 
-                          0px 1px 0px #ccc,
-                          0px 2px 0px #999,
-                          0px 3px 0px #888,
-                          0px 4px 0px #777,
-                          0px 5px 0px #666,
-                          0px 6px 1px rgba(0,0,0,.1),
-                          0px 0px 10px rgba(0,112,243,0.5),
-                          0px 7px 10px rgba(0,0,0,0.4);
-                      transform: perspective(500px) rotateX(10deg);
-                      display: inline-block;
-                      filter: drop-shadow(0 0 15px rgba(0, 223, 216, 0.4));">
+          <!-- Scaled Down 3D Text -->
+          <div class="text-sm md:text-2xl font-black tracking-tighter uppercase italic" 
+               style="background: linear-gradient(to bottom, #fff 30%, #00dfd8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0px 1px 0px #ccc, 0px 2px 0px #999, 0px 4px 6px rgba(0,0,0,0.4); transform: perspective(500px) rotateX(10deg);">
               OUR DREAM
           </div>
       </div>
-      <div class="flex items-center space-x-3 md:space-x-8">
-        <nav class="flex space-x-3 font-medium text-[10px] md:text-base">
-          <a href="#home" class="hover:text-gray-300">Home</a>
-          <a href="#jobs-section" class="hover:text-gray-300">Projects</a>
-          <a href="#gift-cards" class="hover:text-gray-300">Gift Card</a>
+
+      <div class="flex items-center space-x-4 md:space-x-8">
+        <nav class="flex space-x-3 font-medium text-[10px] md:text-sm">
+          <a href="#home" class="hover:text-cyan-400 transition">Home</a>
+          <a href="#jobs-section" class="hover:text-cyan-400 transition">Projects</a>
+          <a href="#gift-cards" class="hover:text-cyan-400 transition">Gift Card</a>
         </nav>
-        <button class="bg-red-600 hover:bg-red-700 px-3 py-1.5 rounded-md font-semibold uppercase text-[10px] md:text-xs whitespace-nowrap">
+        <!-- Header Link -->
+        <a href="আপনার-লিঙ্ক-এখানে" class="bg-red-600 hover:bg-red-700 px-3 py-1 rounded-md font-semibold uppercase text-[10px] md:text-xs">
           Apply Now
-        </button>
+        </a>
       </div>
     </header>
 
-    <section 
-        id="home" class="hero-section h-[75vh] flex flex-col items-center justify-center text-center text-white px-4 pt-24 relative">
-    <div class="fireflies"></div>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section h-[75vh] flex flex-col items-center justify-center text-center text-white px-4 pt-20 relative">
+      <div class="fireflies"></div>
       <div class="relative z-10">
-    <h3 class="text-xl md:text-2xl mb-2" >Exclusive Opportunity</h3>
-      <h1 class="text-4xl md:text-7xl font-extrabold mb-6">
-        $750 EXCLUSIVE <br />
-        BONUS INSIDE
-      </h1>
-      <a href="https://www.car.com/" target="_blank" class="bg-red-600 hover:bg-red-700 px-10 py-3 rounded-full font-bold text-lg transition duration-300 text-white inline-block">
-        APPLY NOW
-      </a>
-    </section>
-    <section class="py-16 bg-white text-center px-6">
-      <div class="max-w-4xl mx-auto">
-        <span class="text-5xl text-gray-300 font-serif leading-none">“</span>
-        <p class="text-xl md:text-2xl italic text-gray-700 -mt-4">
-          By focusing on strategic partnerships, we unlocked 10x growth in just
-          three quarters. The future is truly ours to create.
-        </p>
-        <div class="mt-6">
-          <h4 class="font-bold text-gray-900">Sarah Chen</h4>
-          <p class="text-gray-500 text-sm">
-            Chief Innovation Officer, Axiom Corp.
-          </p>
-        </div>
+        <h3 class="text-lg md:text-xl mb-2">Exclusive Opportunity</h3>
+        <h1 class="text-4xl md:text-7xl font-extrabold mb-6">$750 EXCLUSIVE <br /> BONUS INSIDE</h1>
+        <!-- Hero Button Link -->
+        <a href="আপনার-লিঙ্ক-এখানে" target="_blank" class="bg-red-600 hover:bg-red-700 px-10 py-3 rounded-full font-bold text-lg transition duration-300 inline-block">
+          APPLY NOW
+        </a>
       </div>
     </section>
 
+    <!-- Job Section -->
     <section id="jobs-section" class="py-16 bg-gray-100">
       <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-10 border-b-2 border-gray-300 pb-4">
-          Upcoming Jobs or complete job
-        </h2>
-
+        <h2 class="text-3xl font-bold mb-10 border-b-2 border-gray-300 pb-4 text-gray-800">Upcoming or Complete Jobs</h2>
         <div class="grid md:grid-cols-2 gap-8">
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
-              alt="Job"
-              class="w-full h-56 object-cover"
-            />
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">Online Part time job</h3>
-              <p class="text-gray-600 text-sm mb-4">
-                Can be used on: Mobile, Laptop, Desktop, iPad, etc.
-              </p>
-              <button
-                class="bg-green-500 text-white px-4 py-2 rounded font-bold text-sm"
-              >
-                UPCOMING ➜
-              </button>
-            </div>
-          </div>
           
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
-              alt="Agriculture"
-              class="w-full h-56 object-cover"
-            />
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">Agriculture job</h3>
-              <p class="text-gray-600 text-sm mb-4">30 members done</p>
-              <button
-                class="bg-red-500 text-white px-4 py-2 rounded font-bold text-sm uppercase"
-              >
-                Done ✅
-              </button>
-            </div>
-          </div>
           <!-- Typing Job Card -->
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=600"
-              alt="Typing Job"
-              class="w-full h-56 object-cover"
-            />
-            <div class="p-6">
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+            <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=600" class="w-full h-56 object-cover" alt="Job" />
+            <div class="p-6 flex-grow">
               <h3 class="text-xl font-bold mb-2">Online Typing Job</h3>
-              <p class="text-gray-600 text-sm mb-4">
-                Work from home: Laptop or Desktop required. High accuracy needed.
-              </p>
-              <button
-                class="bg-green-500 text-white px-4 py-2 rounded font-bold text-sm"
-              >
-               APPLY NOW
-              </button>
+              <p class="text-gray-600 text-sm mb-4">Work from home: Laptop or Desktop required. High accuracy needed.</p>
+              <!-- Job Link -->
+              <a href="আপনার-লিঙ্ক-এখানে" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded font-bold text-sm inline-block">APPLY NOW</a>
             </div>
           </div>
-          
-          <!-- Electric Mechanics Job Card -->
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=600"
-              alt="Electric Mechanics"
-              class="w-full h-56 object-cover"
-            />
-            <div class="p-6">
+
+          <!-- Electric Mechanics Card -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=600" class="w-full h-56 object-cover" alt="Mechanics" />
+            <div class="p-6 flex-grow">
               <h3 class="text-xl font-bold mb-2">Electric Mechanics</h3>
               <p class="text-gray-600 text-sm mb-4">15 positions available. Experience in home wiring preferred.</p>
-              <button
-                class="bg-green-500 text-white px-4 py-2 rounded font-bold text-sm uppercase"
-              >
-                APPLY NOW
-              </button>
+              <!-- Job Link -->
+              <a href="আপনার-লিঙ্ক-এখানে" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded font-bold text-sm inline-block uppercase">Apply Now</a>
             </div>
           </div>
+
         </div>
       </div>
     </section>
 
-    
-<section id="gift-cards" style="padding: 50px 0; background-color: #ffffff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-    <div style="max-width: 1100px; margin: 0 auto; padding: 0 20px;">
-        <div style="width: 100%; text-align: center; margin-bottom: 50px;">
-   <!-- পুরো স্ক্রিন জুড়ে লম্বা বক্স -->
-<div style="width: 100%; 
-            background: #f8f8f8; 
-            border-top: 4px solid transparent; 
-            border-bottom: 4px solid transparent; 
-            border-image: linear-gradient(90deg, #ff0000, #ffcc00, #ff0080) 1; 
-            padding: 15px 0; 
-            margin: 40px 0; 
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-    
-    <h2 style="font-size: 28px; 
-               color: #333; 
-               margin: 0; 
-               font-weight: bold; 
-               text-transform: uppercase; 
-               letter-spacing: 2px;
-               font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-        Special Gift Card Offers
-    </h2>
-</div>
-</div>
+    <!-- Gift Card Section -->
+    <section id="gift-cards" class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="w-full bg-gray-50 border-y-4 border-red-500 border-image-source-linear-gradient(90deg, #ff0000, #ffcc00, #ff0080) py-4 mb-10 text-center shadow-sm">
+            <h2 class="text-2xl font-bold uppercase tracking-widest text-gray-800">Special Gift Card Offers</h2>
+        </div>
         
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
-            
-            <div style="background: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; transition: 0.3s; text-align: center; padding-bottom: 20px;">
-                <img src="https://img.icons8.com/color/144/paypal.png" alt="PayPal" style="width: 100px; margin-top: 20px;">
-                <h3 style="font-size: 20px; color: #333; margin: 15px 0;">$750 PayPal Gift Card</h3>
-                <p style="color: #666; padding: 0 15px; font-size: 14px;">Win a chance to get a $750 PayPal gift card instantly!</p>
-                <a href="আপনার-এফমাইন-লিঙ্ক" style="display: inline-block; background-color: #ff0000; color: white; padding: 10px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 15px;">APPLY NOW</a>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- PayPal Card -->
+            <div class="border border-gray-200 rounded-xl p-6 text-center hover:shadow-xl transition">
+                <img src="https://img.icons8.com/color/144/paypal.png" class="w-20 mx-auto mb-4" alt="PayPal">
+                <h3 class="text-xl font-bold mb-2">$750 PayPal Gift Card</h3>
+                <p class="text-gray-500 text-sm mb-4">Win a chance to get a $750 PayPal gift card instantly!</p>
+                <a href="আপনার-লিঙ্ক-এখানে" class="bg-red-600 hover:bg-red-700 text-white px-8 py-2 rounded-lg font-bold inline-block">APPLY NOW</a>
             </div>
-
-            <div style="background: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; transition: 0.3s; text-align: center; padding-bottom: 20px;">
-                <img src="https://img.icons8.com/color/144/amazon.png" alt="Amazon" style="width: 100px; margin-top: 20px;">
-                <h3 style="font-size: 20px; color: #333; margin: 15px 0;">$500 Amazon Gift Card</h3>
-                <p style="color: #666; padding: 0 15px; font-size: 14px;">Grab your free Amazon shopping voucher today.</p>
-                <a href="আপনার-এফমাইন-লিঙ্ক" style="display: inline-block; background-color: #ff0000; color: white; padding: 10px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 15px;">APPLY NOW</a>
+            <!-- Amazon Card -->
+            <div class="border border-gray-200 rounded-xl p-6 text-center hover:shadow-xl transition">
+                <img src="https://img.icons8.com/color/144/amazon.png" class="w-20 mx-auto mb-4" alt="Amazon">
+                <h3 class="text-xl font-bold mb-2">$500 Amazon Gift Card</h3>
+                <p class="text-gray-500 text-sm mb-4">Grab your free Amazon shopping voucher today.</p>
+                <a href="আপনার-লিঙ্ক-এখানে" class="bg-red-600 hover:bg-red-700 text-white px-8 py-2 rounded-lg font-bold inline-block">APPLY NOW</a>
             </div>
-
-            <div style="background: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; transition: 0.3s; text-align: center; padding-bottom: 20px;">
-                <img src="https://img.icons8.com/color/144/cash-app.png" alt="Cash App" style="width: 100px; margin-top: 20px;">
-                <h3 style="font-size: 20px; color: #333; margin: 15px 0;">$1000 Cash App Card</h3>
-                <p style="color: #666; padding: 0 15px; font-size: 14px;">Limited offer to get $1000 Cash App reward.</p>
-                <a href="আপনার-এফমাইন-লিঙ্ক" style="display: inline-block; background-color: #ff0000; color: white; padding: 10px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 15px;">APPLY NOW</a>
+            <!-- Cash App Card -->
+            <div class="border border-gray-200 rounded-xl p-6 text-center hover:shadow-xl transition">
+                <img src="https://img.icons8.com/color/144/cash-app.png" class="w-20 mx-auto mb-4" alt="Cash App">
+                <h3 class="text-xl font-bold mb-2">$1000 Cash App Card</h3>
+                <p class="text-gray-500 text-sm mb-4">Limited offer to get $1000 Cash App reward.</p>
+                <a href="আপনার-লিঙ্ক-এখানে" class="bg-red-600 hover:bg-red-700 text-white px-8 py-2 rounded-lg font-bold inline-block">APPLY NOW</a>
             </div>
-
-        </div>
-    </div>
-</section>
-    <section class="relative py-24 text-white overflow-hidden">
-      <div class="absolute inset-0 z-0">
-        <div 
-          class="w-full h-full bg-cover bg-center bg-fixed" 
-          style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
-        </div>
-      </div>
-
-      <div class="relative z-10 max-w-4xl mx-auto px-6">
-        <div class="border-l-4 border-red-600 pl-6">
-          <h2 class="text-4xl font-bold mb-4">Our Dream</h2>
-          <p class="text-lg leading-relaxed text-gray-200">
-            "We don't just work; we build the foundations of the future. Our goal is to stand out from the ordinary through excellence. Every precise plan and relentless effort we put in creates a legacy of long-lasting success. When your dream becomes our mission, every detail becomes essential. We believe that no achievement is possible without firm determination and the right strategic action—because our every step is a testament to quality and the highest standards of professionalism."
-          </p>
         </div>
       </div>
     </section>
-    
-    <footer class="bg-white py-10 px-6">
-     <div id="stats-section" class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center py-16 bg-white px-6">
-  <div class="flex flex-col items-center">
-    <div class="text-4xl font-bold mb-2"><span class="counter" data-target="34">0</span>%</div>
-    <p class="text-gray-500 uppercase text-[10px] font-semibold tracking-wide">Man (%)</p>
-    <div class="w-full max-w-[100px] bg-gray-200 h-3 mt-4 rounded-full overflow-hidden">
-      <div class="bg-yellow-400 h-full progress-bar w-0 transition-all duration-[2000ms]" data-width="34%"></div>
-    </div>
-  </div>
 
-  <div class="flex flex-col items-center">
-    <div class="text-4xl font-bold mb-2"><span class="counter" data-target="41">0</span>%</div>
-    <p class="text-gray-500 uppercase text-[10px] font-semibold tracking-wide">Women (%)</p>
-    <div class="w-full max-w-[100px] bg-gray-200 h-3 mt-4 rounded-full overflow-hidden">
-      <div class="bg-pink-500 h-full progress-bar w-0 transition-all duration-[2000ms]" data-width="41%"></div>
-    </div>
-  </div>
-
-  <div class="flex flex-col items-center">
-    <div class="text-4xl font-bold mb-2"><span class="counter" data-target="90">0</span>%</div>
-    <p class="text-gray-500 uppercase text-[10px] font-semibold tracking-wide">Success (%)</p>
-    <div class="w-full max-w-[100px] bg-gray-200 h-3 mt-4 rounded-full overflow-hidden">
-      <div class="bg-teal-400 h-full progress-bar w-0 transition-all duration-[2000ms]" data-width="90%"></div>
-    </div>
-  </div>
-
-  <div class="flex flex-col items-center">
-    <div class="text-4xl font-bold mb-2"><span class="counter" data-target="76">0</span>%</div>
-    <p class="text-gray-500 uppercase text-[10px] font-semibold tracking-wide">Job Complete (%)</p>
-    <div class="w-full max-w-[100px] bg-gray-200 h-3 mt-4 rounded-full overflow-hidden">
-      <div class="bg-blue-500 h-full progress-bar w-0 transition-all duration-[2000ms]" data-width="76%"></div>
-    </div>
-  </div>
-</div>
+    <!-- Footer & Stats -->
+    <footer class="bg-white py-10">
+      <div id="stats-section" class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center px-6">
+        <!-- Stat Item -->
+        <div class="flex flex-col items-center">
+          <div class="text-4xl font-black mb-2 text-gray-800"><span class="counter" data-target="90">0</span>%</div>
+          <p class="text-gray-400 text-[10px] font-bold tracking-widest uppercase">Success Rate</p>
+          <div class="w-20 bg-gray-100 h-2 mt-3 rounded-full overflow-hidden">
+            <div class="bg-teal-400 h-full progress-bar w-0 transition-all duration-[2000ms]" data-width="90%"></div>
+          </div>
+        </div>
+        <!-- Add other stats similarly if needed -->
       </div>
-      <div class="text-center mt-12 text-gray-400 text-sm">
-           2000-2026.... Our Dream
+      <div class="text-center mt-12 text-gray-400 text-xs tracking-widest">
+           © 2000-2026 OUR DREAM. All Rights Reserved.
       </div>
     </footer>
 
+    <!-- Scripts -->
     <script>
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const targetId = this.getAttribute('href');
-          const targetElement = document.querySelector(targetId);
-          
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.offsetTop,
-              behavior: 'smooth'
-            });
-          }
-        });
-      });
-    </script>
-  <script>
-  const runStats = () => {
-    document.querySelectorAll('.counter').forEach(counter => {
-      const target = +counter.getAttribute('data-target');
-      let count = 0;
-      const update = () => {
-        const increment = target / 60; 
-        if (count < target) {
-          count += increment;
-          counter.innerText = Math.ceil(count);
-          setTimeout(update, 25);
-        } else {
-          counter.innerText = target;
+      // Fireflies Generation
+      function createFireflies() {
+        const container = document.querySelector('.fireflies');
+        for (let i = 0; i < 20; i++) {
+          const f = document.createElement('div');
+          f.classList.add('firefly');
+          f.style.left = Math.random() * 100 + '%';
+          f.style.top = Math.random() * 100 + '%';
+          f.style.animationDuration = (Math.random() * 10 + 5) + 's, ' + (Math.random() * 3 + 1) + 's';
+          container.appendChild(f);
         }
-      };
-      update();
-    });
-
-    document.querySelectorAll('.progress-bar').forEach(bar => {
-      bar.style.width = bar.getAttribute('data-width');
-    });
-  };
-
-  const resetStats = () => {
-    document.querySelectorAll('.counter').forEach(counter => {
-      counter.innerText = '0';
-    });
-    document.querySelectorAll('.progress-bar').forEach(bar => {
-      bar.style.width = '0';
-    });
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        runStats();
-      } else {
-        resetStats();
       }
-    });
-  }, { threshold: 0.2 });
+      createFireflies();
 
-  const statsEl = document.getElementById('stats-section');
-  if (statsEl) {
-    observer.observe(statsEl);
-  }
-</script>
-    <script>
-  function createFireflies() {
-    const container = document.querySelector('.fireflies');
-    for (let i = 0; i < 20; i++) {
-      const f = document.createElement('div');
-      f.classList.add('firefly');
-      f.style.left = Math.random() * 100 + '%';
-      f.style.top = Math.random() * 100 + '%';
-      f.style.animationDuration = (Math.random() * 10 + 5) + 's, ' + (Math.random() * 3 + 1) + 's';
-      container.appendChild(f);
-    }
-  }
-  createFireflies();
-</script>
+      // Stats Animation
+      const runStats = () => {
+        document.querySelectorAll('.counter').forEach(counter => {
+          const target = +counter.getAttribute('data-target');
+          let count = 0;
+          const update = () => {
+            const increment = target / 50;
+            if (count < target) {
+              count += increment;
+              counter.innerText = Math.ceil(count);
+              setTimeout(update, 30);
+            } else { counter.innerText = target; }
+          };
+          update();
+        });
+        document.querySelectorAll('.progress-bar').forEach(bar => {
+          bar.style.width = bar.getAttribute('data-width');
+        });
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) runStats(); });
+      }, { threshold: 0.5 });
+      observer.observe(document.getElementById('stats-section'));
+    </script>
   </body>
 </html>
