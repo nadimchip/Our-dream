@@ -455,183 +455,134 @@
   }
   createFireflies();
 </script>
-      <!-- Floating Share Button -->
-<!-- Floating Share Button -->
+     <!-- Floating Share Button -->
 <div class="fixed bottom-4 right-6 z-50">
-  <button onclick="toggleShareModal()" class="bg-[#3b82f6] hover:bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-2xl transition-all hover:scale-110 active:scale-95 focus:outline-none">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
-  </button>
+    <button onclick="toggleShareModal()" class="bg-[#3b82f6] hover:bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-2xl transition-all hover:scale-110 active:scale-95 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="18" cy="5" r="3"></circle>
+            <circle cx="6" cy="12" r="3"></circle>
+            <circle cx="18" cy="19" r="3"></circle>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+        </svg>
+    </button>
 </div>
 
-<!-- Share Modal Pop-up -->
+<!-- Share Modal Pop-up (একবার থাকবে এবং স্ক্রিপ্ট ট্যাগের বাইরে থাকবে) -->
 <div id="shareModal" class="hidden fixed inset-0 z-[60] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
-  <div class="bg-white rounded-xl shadow-2xl w-full max-w-sm overflow-hidden animate-in fade-in zoom-in duration-300">
-    <!-- Modal Header -->
-    <div class="flex justify-between items-center px-6 py-4 border-b">
-      <h3 class="text-lg font-bold text-gray-800">Share</h3>
-      <button onclick="toggleShareModal()" class="text-gray-400 hover:text-gray-600">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </button>
+    <div class="bg-white rounded-xl shadow-2xl w-full max-w-md overflow-hidden animate-in fade-in zoom-in duration-300">
+        <!-- Modal Header -->
+        <div class="flex justify-between items-center px-6 py-4 border-b">
+            <h3 class="text-lg font-bold text-gray-800">Share via Social Media</h3>
+            <button onclick="toggleShareModal()" class="text-gray-400 hover:text-gray-600">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Social Media Icons Grid -->
+        <div class="p-6 grid grid-cols-4 gap-4">
+            <!-- Facebook -->
+            <a id="fbShare" target="_blank" class="flex flex-col items-center gap-2 group">
+                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#1877F2] text-white group-hover:scale-110 transition-transform">
+                    <i class="fab fa-facebook-f text-sm"></i>
+                </div>
+                <span class="text-[10px] font-medium text-gray-600">Facebook</span>
+            </a>
+            <!-- WhatsApp -->
+            <a id="waShare" target="_blank" class="flex flex-col items-center gap-2 group">
+                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#25D366] text-white group-hover:scale-110 transition-transform">
+                    <i class="fab fa-whatsapp text-sm"></i>
+                </div>
+                <span class="text-[10px] font-medium text-gray-600">WhatsApp</span>
+            </a>
+            <!-- Telegram -->
+            <a id="tgShare" target="_blank" class="flex flex-col items-center gap-2 group">
+                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#0088cc] text-white group-hover:scale-110 transition-transform">
+                    <i class="fab fa-telegram-plane text-sm"></i>
+                </div>
+                <span class="text-[10px] font-medium text-gray-600">Telegram</span>
+            </a>
+            <!-- Messenger -->
+            <a id="msgShare" target="_blank" class="flex flex-col items-center gap-2 group">
+                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#00B2FF] text-white group-hover:scale-110 transition-transform">
+                    <i class="fab fa-facebook-messenger text-sm"></i>
+                </div>
+                <span class="text-[10px] font-medium text-gray-600">Messenger</span>
+            </a>
+            <!-- LinkedIn -->
+            <a id="liShare" target="_blank" class="flex flex-col items-center gap-2 group">
+                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#0077b5] text-white group-hover:scale-110 transition-transform">
+                    <i class="fab fa-linkedin-in text-sm"></i>
+                </div>
+                <span class="text-[10px] font-medium text-gray-600">LinkedIn</span>
+            </a>
+            <!-- Pinterest -->
+            <a id="pinShare" target="_blank" class="flex flex-col items-center gap-2 group">
+                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#bd081c] text-white group-hover:scale-110 transition-transform">
+                    <i class="fab fa-pinterest-p text-sm"></i>
+                </div>
+                <span class="text-[10px] font-medium text-gray-600">Pinterest</span>
+            </a>
+            <!-- Twitter/X -->
+            <a id="twShare" target="_blank" class="flex flex-col items-center gap-2 group">
+                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-black text-white group-hover:scale-110 transition-transform">
+                    <i class="fab fa-x-twitter text-sm"></i>
+                </div>
+                <span class="text-[10px] font-medium text-gray-600">Twitter</span>
+            </a>
+            <!-- Email -->
+            <a id="mailShare" target="_blank" class="flex flex-col items-center gap-2 group">
+                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-600 text-white group-hover:scale-110 transition-transform">
+                    <i class="fas fa-envelope text-sm"></i>
+                </div>
+                <span class="text-[10px] font-medium text-gray-600">Email</span>
+            </a>
+        </div>
+
+        <!-- Link Copy Section -->
+        <div class="px-6 pb-6">
+            <div class="flex items-center bg-gray-100 p-2 rounded-lg border">
+                <input id="linkInput" type="text" readonly class="bg-transparent text-xs text-gray-500 w-full outline-none px-2">
+                <button onclick="copyCurrentLink()" class="bg-[#3b82f6] text-white text-[10px] px-3 py-1.5 rounded-md hover:bg-blue-600 font-bold">COPY</button>
+            </div>
+        </div>
     </div>
-    
-    <!-- Social Media Icons Grid -->
-    <div class="p-8 grid grid-cols-3 gap-6">
-      <!-- Facebook -->
-      <a id="fbShare" target="_blank" class="flex flex-col items-center gap-2 group">
-        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-600 text-white group-hover:scale-110 transition-transform">
-          <i class="fab fa-facebook-f"></i>
-        </div>
-        <span class="text-xs font-medium text-gray-600">Facebook</span>
-      </a>
-      <!-- Messenger -->
-      <a id="msgShare" target="_blank" class="flex flex-col items-center gap-2 group">
-        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-500 text-white group-hover:scale-110 transition-transform">
-          <i class="fab fa-facebook-messenger"></i>
-        </div>
-        <span class="text-xs font-medium text-gray-600">Messenger</span>
-      </a>
-      <!-- WhatsApp -->
-      <a id="waShare" target="_blank" class="flex flex-col items-center gap-2 group">
-        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-green-500 text-white group-hover:scale-110 transition-transform">
-          <i class="fab fa-whatsapp"></i>
-        </div>
-        <span class="text-xs font-medium text-gray-600">WhatsApp</span>
-      </a>
-      <!-- LinkedIn -->
-      <a id="liShare" target="_blank" class="flex flex-col items-center gap-2 group">
-        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-700 text-white group-hover:scale-110 transition-transform">
-          <i class="fab fa-linkedin-in"></i>
-        </div>
-        <span class="text-xs font-medium text-gray-600">LinkedIn</span>
-      </a>
-      <!-- Twitter/X -->
-      <a id="twShare" target="_blank" class="flex flex-col items-center gap-2 group">
-        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-black text-white group-hover:scale-110 transition-transform">
-          <i class="fab fa-x-twitter"></i>
-        </div>
-        <span class="text-xs font-medium text-gray-600">Twitter</span>
-      </a>
-      <!-- Copy Link -->
-      <button onclick="copyCurrentLink()" class="flex flex-col items-center gap-2 group focus:outline-none">
-        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 group-hover:scale-110 transition-transform">
-          <i class="fas fa-link text-sm"></i>
-        </div>
-        <span class="text-xs font-medium text-gray-600">Copy Link</span>
-      </button>
-    </div>
-  </div>
 </div>
 
 <script>
-  <!-- Share Modal Pop-up -->
-<div id="shareModal" class="hidden fixed inset-0 z-[60] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
-  <div class="bg-white rounded-xl shadow-2xl w-full max-w-md overflow-hidden animate-in fade-in zoom-in duration-300">
-    <!-- Modal Header -->
-    <div class="flex justify-between items-center px-6 py-4 border-b">
-      <h3 class="text-lg font-bold text-gray-800">Share via Social Media</h3>
-      <button onclick="toggleShareModal()" class="text-gray-400 hover:text-gray-600">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </button>
-    </div>
-    
-    <!-- Social Media Icons Grid -->
-    <div class="p-6 grid grid-cols-4 gap-4">
-      <!-- Facebook -->
-      <a id="fbShare" target="_blank" class="flex flex-col items-center gap-2 group">
-        <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#1877F2] text-white group-hover:scale-110 transition-transform">
-          <i class="fab fa-facebook-f text-sm"></i>
-        </div>
-        <span class="text-[10px] font-medium text-gray-600">Facebook</span>
-      </a>
-      <!-- WhatsApp -->
-      <a id="waShare" target="_blank" class="flex flex-col items-center gap-2 group">
-        <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#25D366] text-white group-hover:scale-110 transition-transform">
-          <i class="fab fa-whatsapp text-sm"></i>
-        </div>
-        <span class="text-[10px] font-medium text-gray-600">WhatsApp</span>
-      </a>
-      <!-- Telegram -->
-      <a id="tgShare" target="_blank" class="flex flex-col items-center gap-2 group">
-        <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#0088cc] text-white group-hover:scale-110 transition-transform">
-          <i class="fab fa-telegram-plane text-sm"></i>
-        </div>
-        <span class="text-[10px] font-medium text-gray-600">Telegram</span>
-      </a>
-      <!-- Messenger -->
-      <a id="msgShare" target="_blank" class="flex flex-col items-center gap-2 group">
-        <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#00B2FF] text-white group-hover:scale-110 transition-transform">
-          <i class="fab fa-facebook-messenger text-sm"></i>
-        </div>
-        <span class="text-[10px] font-medium text-gray-600">Messenger</span>
-      </a>
-      <!-- LinkedIn -->
-      <a id="liShare" target="_blank" class="flex flex-col items-center gap-2 group">
-        <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#0077b5] text-white group-hover:scale-110 transition-transform">
-          <i class="fab fa-linkedin-in text-sm"></i>
-        </div>
-        <span class="text-[10px] font-medium text-gray-600">LinkedIn</span>
-      </a>
-      <!-- Pinterest -->
-      <a id="pinShare" target="_blank" class="flex flex-col items-center gap-2 group">
-        <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#bd081c] text-white group-hover:scale-110 transition-transform">
-          <i class="fab fa-pinterest-p text-sm"></i>
-        </div>
-        <span class="text-[10px] font-medium text-gray-600">Pinterest</span>
-      </a>
-      <!-- Twitter/X -->
-      <a id="twShare" target="_blank" class="flex flex-col items-center gap-2 group">
-        <div class="w-10 h-10 flex items-center justify-center rounded-full bg-black text-white group-hover:scale-110 transition-transform">
-          <i class="fab fa-x-twitter text-sm"></i>
-        </div>
-        <span class="text-[10px] font-medium text-gray-600">Twitter</span>
-      </a>
-      <!-- Email -->
-      <a id="mailShare" target="_blank" class="flex flex-col items-center gap-2 group">
-        <div class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-600 text-white group-hover:scale-110 transition-transform">
-          <i class="fas fa-envelope text-sm"></i>
-        </div>
-        <span class="text-[10px] font-medium text-gray-600">Email</span>
-      </a>
-    </div>
-    
-    <!-- Link Copy Section -->
-    <div class="px-6 pb-6">
-      <div class="flex items-center bg-gray-100 p-2 rounded-lg border">
-        <input id="linkInput" type="text" readonly class="bg-transparent text-xs text-gray-500 w-full outline-none px-2">
-        <button onclick="copyCurrentLink()" class="bg-[#3b82f6] text-white text-[10px] px-3 py-1.5 rounded-md hover:bg-blue-600 font-bold">COPY</button>
-      </div>
-    </div>
-  </div>
-</div>
+    // সাইট ইউআরএল এবং টাইটেল
+    const siteUrl = window.location.href;
+    const siteTitle = "Our Dream - Build your future!";
 
-<script>
-  const siteUrl = window.location.href;
-  const siteTitle = "Our Dream - Build your future!";
+    // ইনপুট বক্সে লিঙ্কটি বসানো
+    document.getElementById('linkInput').value = siteUrl;
 
-  // ইনপুট বক্সে লিঙ্ক সেট করা
-  document.getElementById('linkInput').value = siteUrl;
+    // প্রতিটি শেয়ার বাটনের জন্য লিঙ্ক তৈরি করা
+    document.getElementById('fbShare').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(siteUrl)}`;
+    document.getElementById('waShare').href = `https://api.whatsapp.com/send?text=${encodeURIComponent(siteTitle + " " + siteUrl)}`;
+    document.getElementById('tgShare').href = `https://t.me/share/url?url=${encodeURIComponent(siteUrl)}&text=${encodeURIComponent(siteTitle)}`;
+    document.getElementById('msgShare').href = `fb-messenger://share/?link=${encodeURIComponent(siteUrl)}`;
+    document.getElementById('liShare').href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(siteUrl)}`;
+    document.getElementById('pinShare').href = `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(siteUrl)}&description=${encodeURIComponent(siteTitle)}`;
+    document.getElementById('twShare').href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(siteUrl)}&text=${encodeURIComponent(siteTitle)}`;
+    document.getElementById('mailShare').href = `mailto:?subject=${encodeURIComponent(siteTitle)}&body=${encodeURIComponent(siteUrl)}`;
 
-  // সোশ্যাল লিঙ্কগুলো সেট করা
-  document.getElementById('fbShare').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(siteUrl)}`;
-  document.getElementById('waShare').href = `https://api.whatsapp.com/send?text=${encodeURIComponent(siteTitle + " " + siteUrl)}`;
-  document.getElementById('tgShare').href = `https://t.me/share/url?url=${encodeURIComponent(siteUrl)}&text=${encodeURIComponent(siteTitle)}`;
-  document.getElementById('msgShare').href = `fb-messenger://share/?link=${encodeURIComponent(siteUrl)}`;
-  document.getElementById('liShare').href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(siteUrl)}`;
-  document.getElementById('pinShare').href = `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(siteUrl)}&description=${encodeURIComponent(siteTitle)}`;
-  document.getElementById('twShare').href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(siteUrl)}&text=${encodeURIComponent(siteTitle)}`;
-  document.getElementById('mailShare').href = `mailto:?subject=${encodeURIComponent(siteTitle)}&body=${encodeURIComponent(siteUrl)}`;
+    // মোডাল দেখানো বা লুকানোর ফাংশন
+    function toggleShareModal() {
+        const modal = document.getElementById('shareModal');
+        modal.classList.toggle('hidden');
+    }
 
-  function toggleShareModal() {
-    const modal = document.getElementById('shareModal');
-    modal.classList.toggle('hidden');
-  }
-
-  function copyCurrentLink() {
-    const linkInput = document.getElementById('linkInput');
-    linkInput.select();
-    navigator.clipboard.writeText(linkInput.value);
-    alert("Link copied to clipboard!");
-  }
+    // লিঙ্ক কপি করার ফাংশন
+    function copyCurrentLink() {
+        const linkInput = document.getElementById('linkInput');
+        linkInput.select();
+        navigator.clipboard.writeText(linkInput.value);
+        alert("Link copied to clipboard!");
+    }
 </script>
   </body>
 </html>
