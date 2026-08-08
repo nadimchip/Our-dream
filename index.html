@@ -63,8 +63,9 @@
     </style>
   </head>
   <body class="bg-gray-50">
-    <!-- মূল হেডার যা ফিক্সড থাকবে -->
-    <header class="fixed w-full z-50">
+    <!-- হেডার বা মারকিউ কোনোটিই আর fixed থাকবে না, স্বাভাবিকভাবে পেজের সাথে স্ক্রল হবে -->
+    <header class="w-full z-50">
+      <!-- Main Navbar -->
       <div class="flex items-center justify-between px-2 md:px-8 py-2 text-white backdrop-blur-md bg-black/20 border-b border-white/10">
         <div class="flex items-center space-x-3">
             <!-- OD 3D SVG LOGO -->
@@ -111,14 +112,14 @@
           </a>
         </div>
       </div>
-    </header>
 
-    <!-- ফিক্সড ছাড়া সাধারণ মারকিউ বার (হেডারের নিচে স্বাভাবিকভাবে থাকবে এবং স্ক্রল করলে চলে যাবে) -->
-    <div class="w-full bg-black/40 backdrop-blur-md py-2 border-b border-white/10 relative z-40" style="margin-top: 56px;">
-      <marquee behavior="scroll" direction="left" scrollamount="5" style="color: #ffcc00; font-weight: bold; font-size: 15px; font-family: 'Inter', sans-serif;">
-        🎁 Share this page with 30 of your friends for a chance to be the 1st winner of our exciting giveaway! Seize this limited-time opportunity and become one of the 100 lucky winners. 🔥
-      </marquee>
-    </div>
+      <!-- কাঁচের মতো স্বচ্ছ মারকিউ বার -->
+      <div class="w-full bg-black/40 backdrop-blur-md py-1.5 border-b border-white/10">
+        <marquee behavior="scroll" direction="left" scrollamount="5" style="color: #ffcc00; font-weight: bold; font-size: 14px; font-family: 'Inter', sans-serif;">
+          🎁 Share this page with 30 of your friends for a chance to be the 1st winner of our exciting giveaway! Seize this limited-time opportunity and become one of the 100 lucky winners. 🔥
+        </marquee>
+      </div>
+    </header>
 
     <section id="home" class="hero-section h-[75vh] flex flex-col items-center justify-center text-center text-white px-4 pt-10 relative">
       <div class="fireflies"></div>
