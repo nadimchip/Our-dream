@@ -113,8 +113,15 @@
       </div>
     </header>
 
+    <!-- এখানে হেডার ও হিরো সেকশনের মাঝখানে চলমান টেক্সট (Marquee) যুক্ত করা হয়েছে -->
+    <div class="w-full bg-black/70 py-2 pt-20 border-b border-white/10 z-40 relative">
+      <marquee behavior="scroll" direction="left" scrollamount="5" style="color: #ffcc00; font-weight: bold; font-size: 15px; font-family: 'Inter', sans-serif;">
+        🎁 Share this page with 30 of your friends for a chance to be the 1st winner of our exciting giveaway! Seize this limited-time opportunity and become one of the 100 lucky winners. 🔥
+      </marquee>
+    </div>
+
     <section 
-        id="home" class="hero-section h-[75vh] flex flex-col items-center justify-center text-center text-white px-4 pt-24 relative">
+        id="home" class="hero-section h-[75vh] flex flex-col items-center justify-center text-center text-white px-4 pt-10 relative">
     <div class="fireflies"></div>
       <div class="relative z-10">
     <h3 class="text-xl md:text-2xl mb-2" >Exclusive Opportunity</h3>
@@ -125,6 +132,7 @@
       <a href="https://www.pinterest.com/" target="_blank" class="bg-red-600 hover:bg-red-700 px-10 py-3 rounded-full font-bold text-lg transition duration-300 text-white inline-block">
         APPLY NOW
       </a>
+      </div>
     </section>
     <section class="py-16 bg-white text-center px-6">
       <div class="max-w-4xl mx-auto">
@@ -198,7 +206,7 @@
               </p>
              <a href="https://www.pinterest.com" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded font-bold text-sm inline-block">
             APPLY NOW
-            </a>
+             </a>
             </div>
           </div>
           
@@ -214,7 +222,7 @@
               <p class="text-gray-600 text-sm mb-4">15 positions available. Experience in home wiring preferred.</p>
                <a href="https://www.pinterest.com" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded font-bold text-sm inline-block">
              APPLY NOW
-             </a>
+               </a>
               </button>
             </div>
           </div>
@@ -226,7 +234,7 @@
 <section id="gift-cards" style="padding: 50px 0; background-color: #ffffff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
     <div style="max-width: 1100px; margin: 0 auto; padding: 0 20px;">
         <div style="width: 100%; text-align: center; margin-bottom: 50px;">
-   <!-- পুরো স্ক্রিন জুড়ে লম্বা বক্স -->
+   <!-- পুরো স্ক্রিন জুড়ে লম্বা বক্স -->
 <div style="width: 100%; 
             background: #f8f8f8; 
             border-top: 4px solid transparent; 
@@ -559,7 +567,7 @@
     // ইনপুট বক্সে লিঙ্কটি বসানো
     document.getElementById('linkInput').value = siteUrl;
 
-    // প্রতিটি শেয়ার বাটনের জন্য লিঙ্ক তৈরি করা
+    // প্রতিটি শেয়ার বাটনের জন্য লিঙ্ক তৈরি করা
     document.getElementById('fbShare').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(siteUrl)}`;
     document.getElementById('waShare').href = `https://api.whatsapp.com/send?text=${encodeURIComponent(siteTitle + " " + siteUrl)}`;
     document.getElementById('tgShare').href = `https://t.me/share/url?url=${encodeURIComponent(siteUrl)}&text=${encodeURIComponent(siteTitle)}`;
