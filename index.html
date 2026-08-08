@@ -63,62 +63,64 @@
     </style>
   </head>
   <body class="bg-gray-50">
-    <header class="fixed w-full flex items-center justify-between px-2 md:px-8 py-0.5 text-white z-50 backdrop-blur-2xl bg-black/20 border-b border-white/10">
-      
-      <div class="flex items-center space-x-3">
-          <!-- OD 3D SVG LOGO -->
-          <svg width="40" height="40" viewBox="0 0 100 100" style="filter: drop-shadow(0 0 12px rgba(0, 223, 216, 0.7));">
-              <defs>
-                  <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" style="stop-color:#ff0080;stop-opacity:1" />
-                      <stop offset="50%" style="stop-color:#7928ca;stop-opacity:1" />
-                      <stop offset="100%" style="stop-color:#00dfd8;stop-opacity:1" />
-                  </linearGradient>
-              </defs>
-              <circle cx="35" cy="50" r="30" stroke="url(#logoGradient)" stroke-width="8" fill="none" stroke-linecap="round" />
-              <path d="M55 20 V80 Q85 80 85 50 Q85 20 55 20" fill="none" stroke="url(#logoGradient)" stroke-width="8" stroke-linecap="round" />
-          </svg>
+    <header class="fixed w-full z-50">
+      <!-- Main Navbar -->
+      <div class="flex items-center justify-between px-2 md:px-8 py-2 text-white backdrop-blur-md bg-black/20 border-b border-white/10">
+        <div class="flex items-center space-x-3">
+            <!-- OD 3D SVG LOGO -->
+            <svg width="40" height="40" viewBox="0 0 100 100" style="filter: drop-shadow(0 0 12px rgba(0, 223, 216, 0.7));">
+                <defs>
+                    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#ff0080;stop-opacity:1" />
+                        <stop offset="50%" style="stop-color:#7928ca;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#00dfd8;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <circle cx="35" cy="50" r="30" stroke="url(#logoGradient)" stroke-width="8" fill="none" stroke-linecap="round" />
+                <path d="M55 20 V80 Q85 80 85 50 Q85 20 55 20" fill="none" stroke="url(#logoGradient)" stroke-width="8" stroke-linecap="round" />
+            </svg>
 
-          <div class="text-lg md:text-4xl font-black tracking-tighter uppercase italic" 
-               style="color: #fff;
-                      background: linear-gradient(to bottom, #fff 30%, #00dfd8 100%);
-                      -webkit-background-clip: text;
-                      -webkit-text-fill-color: transparent;
-                      text-shadow: 
-                          0px 1px 0px #ccc,
-                          0px 2px 0px #999,
-                          0px 3px 0px #888,
-                          0px 4px 0px #777,
-                          0px 5px 0px #666,
-                          0px 6px 1px rgba(0,0,0,.1),
-                          0px 0px 10px rgba(0,112,243,0.5),
-                          0px 7px 10px rgba(0,0,0,0.4);
-                      transform: perspective(500px) rotateX(10deg);
-                      display: inline-block;
-                      filter: drop-shadow(0 0 15px rgba(0, 223, 216, 0.4));">
-              OUR DREAM
-          </div>
+            <div class="text-lg md:text-4xl font-black tracking-tighter uppercase italic" 
+                 style="color: #fff;
+                        background: linear-gradient(to bottom, #fff 30%, #00dfd8 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        text-shadow: 
+                            0px 1px 0px #ccc,
+                            0px 2px 0px #999,
+                            0px 3px 0px #888,
+                            0px 4px 0px #777,
+                            0px 5px 0px #666,
+                            0px 6px 1px rgba(0,0,0,.1),
+                            0px 0px 10px rgba(0,112,243,0.5),
+                            0px 7px 10px rgba(0,0,0,0.4);
+                        transform: perspective(500px) rotateX(10deg);
+                        display: inline-block;
+                        filter: drop-shadow(0 0 15px rgba(0, 223, 216, 0.4));">
+                OUR DREAM
+            </div>
+        </div>
+        <div class="flex items-center space-x-3 md:space-x-8">
+          <nav class="flex space-x-3 font-medium text-[10px] md:text-base">
+            <a href="#home" class="hover:text-gray-300">Home</a>
+            <a href="#jobs-section" class="hover:text-gray-300">Projects</a>
+            <a href="#gift-cards" class="hover:text-gray-300">Gift Card</a>
+          </nav>
+          <a href="https://www.pinterest.com" target="_blank" class="bg-red-600 hover:bg-red-700 px-3 py-1.5 rounded-md font-semibold uppercase text-[10px] md:text-xs whitespace-nowrap inline-block">
+            Apply Now 
+          </a>
+        </div>
       </div>
-      <div class="flex items-center space-x-3 md:space-x-8">
-        <nav class="flex space-x-3 font-medium text-[10px] md:text-base">
-          <a href="#home" class="hover:text-gray-300">Home</a>
-          <a href="#jobs-section" class="hover:text-gray-300">Projects</a>
-          <a href="#gift-cards" class="hover:text-gray-300">Gift Card</a>
-        </nav>
-        <a href="https://www.pinterest.com" target="_blank" class="bg-red-600 hover:bg-red-700 px-3 py-1.5 rounded-md font-semibold uppercase text-[10px] md:text-xs whitespace-nowrap inline-block">
-          Apply Now 
-        </a>
+
+      <!-- কাঁচের মতো স্বচ্ছ মারকিউ বার (হেডারের অংশ হিসেবে নিচে যুক্ত করা হয়েছে) -->
+      <div class="w-full bg-black/20 backdrop-blur-md py-1.5 border-b border-white/10">
+        <marquee behavior="scroll" direction="left" scrollamount="5" style="color: #ffcc00; font-weight: bold; font-size: 14px; font-family: 'Inter', sans-serif;">
+          🎁 Share this page with 30 of your friends for a chance to be the 1st winner of our exciting giveaway! Seize this limited-time opportunity and become one of the 100 lucky winners. 🔥
+        </marquee>
       </div>
     </header>
 
-    <!-- কাঁচের মতো স্বচ্ছ এবং হেডার ব্যাকগ্রাউন্ডের সাথে সামঞ্জস্যপূর্ণ মারকিউ বক্স -->
-    <div class="w-full bg-black/25 backdrop-blur-md py-2 pt-20 border-b border-white/10 z-40 relative">
-      <marquee behavior="scroll" direction="left" scrollamount="5" style="color: #ffcc00; font-weight: bold; font-size: 15px; font-family: 'Inter', sans-serif;">
-        🎁 Share this page with 30 of your friends for a chance to be the 1st winner of our exciting giveaway! Seize this limited-time opportunity and become one of the 100 lucky winners. 🔥
-      </marquee>
-    </div>
-
-    <section id="home" class="hero-section h-[75vh] flex flex-col items-center justify-center text-center text-white px-4 pt-10 relative">
+    <section id="home" class="hero-section h-[75vh] flex flex-col items-center justify-center text-center text-white px-4 pt-28 relative">
       <div class="fireflies"></div>
       <div class="relative z-10">
         <h3 class="text-xl md:text-2xl mb-2">Exclusive Opportunity</h3>
